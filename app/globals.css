@@ -1,42 +1,208 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+@layer components {
+  .glitch-text {
+    position: relative;
+    display: inline-block;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text); /* Duplicate the text */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    mix-blend-mode: multiply;
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    animation: glitch 3s infinite linear;
+  }
+
+  .glitch-text::before {
+    animation-delay: 0.1s;
+    color: #ff1731; /* Red color for glitch */
+  }
+
+  .glitch-text::after {
+    animation-delay: 0.2s;
+    color: #5d00ff; /* Purple color for glitch */
+  }
+
+  @keyframes glitch {
+    0% {
+      transform: translate3d(-1px, -1px, 0);
+      opacity: 1;
+    }
+    10% {
+      transform: translate3d(1px, 1px, 0);
+      opacity: 0.8;
+    }
+    20% {
+      transform: translate3d(-2px, -2px, 0);
+      opacity: 1;
+    }
+    30% {
+      transform: translate3d(2px, 2px, 0);
+      opacity: 0.8;
+    }
+    40% {
+      transform: translate3d(-3px, -3px, 0);
+      opacity: 1;
+    }
+    50% {
+      transform: translate3d(3px, 3px, 0);
+      opacity: 0.7;
+    }
+    60% {
+      transform: translate3d(-4px, -4px, 0);
+      opacity: 1;
+    }
+    70% {
+      transform: translate3d(4px, 4px, 0);
+      opacity: 0.6;
+    }
+    80% {
+      transform: translate3d(-5px, -5px, 0);
+      opacity: 1;
+    }
+    90% {
+      transform: translate3d(5px, 5px, 0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+}
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* Cursor blink effect */
+@keyframes cursor-blink {
+  0% {
+    border-right-color: black;
   }
+
+  100% {
+    border-right-color: transparent;
+  }
+}
+
+/* Apply animation */
+.animate-typing {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid black; /* Thicker cursor for bolder look */
+  animation: typing 4s steps(30) 1s 1 normal both,
+    cursor-blink 4s steps(30) 1s normal both,
+    cursor-blink-final 4s steps(30) 4s forwards; /* Add delay to blink at the end */
+}
+
+/* Final animation to make the cursor disappear after blinking at the end */
+@keyframes cursor-blink-final {
+  0% {
+    border-right-color: black;
+  }
+
+  100% {
+    border-right-color: transparent; /* Ensure cursor disappears after blink */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+.glass-text {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    /* ← Black translucent mask */ url("/grain.webp"),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1));
+  background-size: cover;
+  background-blend-mode: overlay, normal; /* ← Applies the black mask over the grain */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: brightness(1.2);
+  mix-blend-mode: screen;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
