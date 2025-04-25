@@ -136,7 +136,7 @@ const Footer = () => {
         <h1 className="leading-none">Turning ideas into reality</h1>
 
         <div className="flex items-end gap-0 lg:w-full lg:justify-center lg:text-center">
-          <h1 className="text-6xl text-red-600 xl:text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl ">
+          <h1 className="text-6xl text-red-600 xl:text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl sm:mx-2">
             admin@adityapsingh.com
           </h1>
         </div>
