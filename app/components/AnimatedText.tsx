@@ -1,7 +1,14 @@
 "use client";
 
-import React, { memo, useEffect, useRef } from "react";
-import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
+import React, { memo, useEffect, useMemo, useRef } from "react";
+import {
+  domAnimation,
+  LazyMotion,
+  m,
+  useInView,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
 import { Variants } from "framer-motion";
 
 // Type for the props passed to AnimatedText
@@ -41,30 +48,33 @@ interface AnimatedTextProps {
 }
 
 function AnimatedTextComponent({ text, className = "" }: AnimatedTextProps) {
-  const words = React.useMemo(() => text.split(" "), [text]);
+  const words = useMemo(() => text.split(" "), [text]);
 
   return (
     <div className="w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden sm:py-0">
-      <motion.h1
-        className={`inline-block w-full text-dark font-bold capitalize text-8xl dark:text-light ${className}`}
-        variants={quote}
-        initial="initial"
-        animate="animate"
-      >
-        {words.map((word, index) => (
-          <motion.span
-            key={index}
-            className="inline-block"
-            variants={singleWord}
-          >
-            {word}&nbsp;
-          </motion.span>
-        ))}
-      </motion.h1>
+      <LazyMotion features={domAnimation}>
+        <m.h1
+          className={`inline-block w-full text-dark font-bold capitalize text-8xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl dark:text-light ${className}`}
+          variants={quote}
+          initial={false} // ✅ don’t delay paint
+          whileInView="animate" // ✅ animate only in view
+          viewport={{ once: true, amount: 0.8 }} // ✅ animate when mostly visible
+        >
+          {words.map((word, index) => (
+            <m.span
+              key={index}
+              className="inline-block will-change-transform" // ✅ GPU hint
+              variants={singleWord}
+              transition={{ type: "tween", duration: 0.4 }}
+            >
+              {word}&nbsp;
+            </m.span>
+          ))}
+        </m.h1>
+      </LazyMotion>
     </div>
   );
 }
-
 export const AnimatedNumbers = ({ value }: { value: number }) => {
   const ref1 = useRef<HTMLSpanElement | null>(null);
   const motionValue = useMotionValue(0);
