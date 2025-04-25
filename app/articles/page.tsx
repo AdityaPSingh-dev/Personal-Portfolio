@@ -12,7 +12,7 @@ const Articles = () => {
         <title>Aditya| Articles Page</title>
       </Head>
       ;
-      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
+      <main className="w-full  flex flex-col items-center justify-center overflow-hidden">
         <Layout className="pt-16">
           <AnimatedText
             text="Words Can Change The World"
@@ -34,7 +34,7 @@ const Articles = () => {
               img={Calculator}
             /> */}
           </ul>
-          <h2 className="font-bold text-4xl w-full text-center mt-32 ">
+          <h2 className="font-bold text-4xl w-full text-center mt-32 mb-16 ">
             All Articles
           </h2>
         </Layout>

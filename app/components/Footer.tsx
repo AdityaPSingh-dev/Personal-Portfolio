@@ -11,6 +11,7 @@ import {
   TwitterIcon,
 } from "./Icons";
 import { Roboto, Roboto_Slab } from "next/font/google";
+import "../globals.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -74,7 +75,7 @@ export const DropdownMenu: React.FC = () => {
           >
             <nav className="flex flex-col items-start space-y-2">
               <motion.a
-                href="https://twitter.com"
+                href="https://x.com/A_d_itya"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
@@ -83,7 +84,7 @@ export const DropdownMenu: React.FC = () => {
                 <TwitterIcon /> <span>Twitter</span>
               </motion.a>
               <motion.a
-                href="https://github.com"
+                href=" https://github.com/AdityaPSingh-dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
@@ -92,7 +93,7 @@ export const DropdownMenu: React.FC = () => {
                 <GithubIcon /> <span>GitHub</span>
               </motion.a>
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/aditya-pratap-singh-b6a8291ba/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
@@ -101,7 +102,7 @@ export const DropdownMenu: React.FC = () => {
                 <LinkedInIcon /> <span>LinkedIn</span>
               </motion.a>
               <motion.a
-                href="https://pinterest.com"
+                href="https://www.pinterest.com/AdiSingh1505/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
@@ -110,7 +111,7 @@ export const DropdownMenu: React.FC = () => {
                 <PinterestIcon /> <span>Pinterest</span>
               </motion.a>
               <motion.a
-                href="https://dribbble.com"
+                href="https://dribbble.com/Aditya1505"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
@@ -130,13 +131,13 @@ const Footer = () => {
   return (
     <>
       <div
-        className={`flex-col gap-0 lg:w-full lg:justify-center lg:text-center w-full text-8xl px-32 font-semibold ${robotoSlab.className} my-12 border-t-2 border-solid border-dark py-24 bg-[#F2F3F2] dark:bg-dark dark:text-light dark:border-light xl:text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl`}
+        className={`flex-col gap-0 lg:w-full lg:justify-center lg:text-center w-full text-8xl px-32 font-semibold ${robotoSlab.className} bg-[#d9d9dd]  border-t-2 border-solid border-dark py-24  dark:bg-[#4b5563] dark:text-light dark:border-light xl:text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl`}
       >
         <h1 className="leading-none">Turning ideas into reality</h1>
 
         <div className="flex items-end gap-0 lg:w-full lg:justify-center lg:text-center">
           <h1 className="text-6xl text-red-600 xl:text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl ">
-            alex.jordan@email.com
+            admin@adityapsingh.com
           </h1>
         </div>
       </div>
@@ -161,7 +162,7 @@ const Footer = () => {
             <div className="flex items-center justify-center ">
               <p className="font-extralight italic sm:hidden md:hidden">X :</p>
               <motion.a
-                href="https://twitter.com"
+                href="https://x.com/A_d_itya"
                 target="_blank"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
@@ -175,7 +176,7 @@ const Footer = () => {
                 GitHub :
               </p>
               <motion.a
-                href="https://github.com"
+                href="https://github.com/AdityaPSingh-dev"
                 target="_blank"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
@@ -189,7 +190,7 @@ const Footer = () => {
                 LinkedIn :
               </p>
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/aditya-pratap-singh-b6a8291ba/"
                 target="_blank"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
@@ -203,7 +204,7 @@ const Footer = () => {
                 Pinterest :
               </p>
               <motion.a
-                href="https://pinterest.com"
+                href="https://www.pinterest.com/AdiSingh1505/"
                 target="_blank"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
@@ -217,7 +218,7 @@ const Footer = () => {
                 Dribbble :
               </p>
               <motion.a
-                href="https://dribbble.com"
+                href="https://dribbble.com/Aditya1505"
                 target="_blank"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
@@ -228,7 +229,7 @@ const Footer = () => {
             </div>
           </div>
         </Layout>
-        <div className="bottom-0 left-0 w-full h-auto overflow-hidden z-10">
+        <div className="bottom-0 left-0 w-full h-auto overflow-hidden z-10 repeating-bg opacity-85">
           <div className="h-full translate-y-1/4 flex justify-center items-center px-6 sm:px-10 md:px-20 lg:px-28">
             <h1 className="glass-text font-extrabold opacity-80 text-9xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl whitespace-nowrap text-center">
               Developer.&nbsp;Designer.
@@ -241,5 +242,3 @@ const Footer = () => {
 };
 
 export default Footer;
-// Let’s Build Something Great Together
-// 📧 brian@domain.com

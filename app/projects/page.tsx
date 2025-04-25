@@ -83,7 +83,7 @@ const Projects = () => {
               />
             </div>
             {/* Column 1 */}
-            <div className="col-span-6 space-y-12 sm:col-span-12 md:col-span-12 xs:space-y-8 sm:space-y-8  grid place-items-center">
+            <div className="col-span-6 space-y-12 sm:col-span-12 md:col-span-12 xs:space-y-8 sm:space-y-8 grid place-items-center mb-16">
               <Project
                 title="OchiDesign Website"
                 img={ochi}
@@ -102,7 +102,7 @@ const Projects = () => {
             </div>
 
             {/* Column 2 */}
-            <div className="col-span-6 space-y-12 sm:col-span-12 md:col-span-12 xs:space-y-8 sm:space-y-8 grid place-items-center mb-2">
+            <div className="col-span-6 space-y-12 sm:col-span-12 md:col-span-12 xs:space-y-8 sm:space-y-8 grid place-items-center mb-16">
               <Project
                 title="Three JS"
                 img={threejs}
@@ -126,9 +126,3 @@ const Projects = () => {
 };
 
 export default Projects;
-{
-  /*
-  
-  
-  */
-}

@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import "../globals.css";
 
 // Define the types for the props
 interface LayoutProps {
@@ -9,9 +10,8 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children, className = "" }) => {
   return (
     <div
-      className={`w-full h-full inline-block z-0 bg-[#F2F3F2] px-32 dark:bg-dark xl:p-24 lg:p-16 md:p-12 sm:p-8 ${className}`}
+      className={`w-full h-full inline-block z-10 repeating-bg opacity-85 px-32 dark:bg-black xl:p-24 lg:p-16 md:p-12 overflow-hidden sm:p-8 ${className}`}
     >
-      <div className="pattern-diagonal-lines pattern-gray-900 pattern-bg-white pattern-size-1 pattern-opacity-5"></div>
       {children}
     </div>
   );

@@ -7,6 +7,7 @@ import Model from "./components/model/model"; // Direct import
 import Head from "next/head";
 import localFont from "next/font/local";
 import { Open_Sans } from "next/font/google";
+import { PiDownloadSimpleBold } from "react-icons/pi";
 
 const myFont2 = localFont({
   src: "../public/fonts/just-sans-outline/JUST Sans Outline ExBold.otf",
@@ -38,7 +39,7 @@ export default function Home() {
                 <div className="flex-col items-end gap-0 lg:w-full lg:justify-center lg:text-center">
                   <AnimatedText
                     text="Aditya"
-                    className={`!text-left font ${myFont2.className} xl:text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl font-extrabold `}
+                    className={`!text-left font ${myFont2.className} xl:text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl font-extrabold`}
                   />
 
                   <AnimatedText
@@ -55,28 +56,29 @@ export default function Home() {
               </div>
 
               <hr />
-              <div className="flex items-center self-start p-10 mt-2 pl-8 lg:self-center">
+              <div className="flex items-center self-start p-10 mt-2 pl-0 lg:self-center ">
                 <Link
-                  href="/dummy.pdf"
+                  href="/Aditya-Resume.pdf"
                   target="_blank"
                   download
                   className="flex items-center justify-center px-8 py-2 border-2 border-black uppercase bg-white text-neutral-700
                     transition-all duration-300 text-lg font-bold shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] 
                     dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] 
-                    hover:bg-gray-500 hover:text-white dark:hover:bg-gray-500 dark:hover:text-white
+                    hover:bg-[#c8f67e]  dark:hover:bg-[#538109] dark:hover:text-white hover:text-white 
                     active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0)] 
                     dark:active:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255)] md:text-base sm:text-sm md:p-2 md:px-4 sm:p-1 sm:px-2"
                 >
                   Resume
+                  <PiDownloadSimpleBold className="ml-2 w-6 h-6  " />
                 </Link>
 
                 <Link
-                  href="mailto:W3oP0@example.com"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=admin@adityapsingh.com"
                   target={"_blank"}
                   className="flex items-center justify-center px-8 py-2 border-2 border-black dark:border-black uppercase bg-white text-neutral-700 
                     transition-all duration-300 text-lg font-bold shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] 
                     dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] 
-                    hover:bg-gray-500 hover:text-white dark:hover:bg-gray-500 dark:hover:text-white 
+                    hover:bg-[#c8f67e]  dark:hover:bg-[#538109] dark:hover:text-white hover:text-white 
                     active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0)] 
                     dark:active:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255)] ml-4 md:text-base sm:text-sm md:p-2 md:px-4 sm:p-1 sm:px-2"
                 >

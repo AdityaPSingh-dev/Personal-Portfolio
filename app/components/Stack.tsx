@@ -51,11 +51,11 @@ export const Stack: FC<StackProps> = ({
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
       variants={containerVariants}
-      className="w-full flex flex-col lg:flex-row gap-8 mb-16"
+      className="w-full flex flex-col gap-8 mb-16"
       aria-label={`${text} stack section`}
     >
       <h2
-        className={`text-6xl sm:text-4xl md:text-5xl font-bold w-full lg:w-[220px] text-center lg:text-right ${className} ${myFont2.className}`}
+        className={`text-6xl sm:text-4xl md:text-5xl font-bold w-full lg:w-[220px] sm:text-center ${className} ${myFont2.className}`}
       >
         {text}
       </h2>
@@ -84,7 +84,7 @@ export const Stack: FC<StackProps> = ({
                   style={{ fill: colors[index] || "#ffffff" }}
                 />
               )}
-              <p className="text-xs sm:text-sm font-medium text-black dark:text-white break-words max-w-[80px]">
+              <p className="text-xs sm:text-sm font-medium text-black dark:text-white break-words max-w-[80px] sm:p-2">
                 {item}
               </p>
             </motion.div>

@@ -167,10 +167,18 @@ const NavBar = () => {
                 className="mx-3 dark:text-dark"
               />
             </div>
+            {/* // Let’s Build Something Great Together
+// 📧 brian@domain.com
+Twitter :   https://x.com/A_d_itya
+LinkedIn: https://www.linkedin.com/in/aditya-pratap-singh-b6a8291ba/
+Github:  https://github.com/AdityaPSingh-dev
+Dribble: https://dribbble.com/Aditya1505
+Pinterest: https://www.pinterest.com/AdiSingh1505/
+*/}
             {/* Social Icons */}
             <div className="flex items-center ml-24">
               <motion.a
-                href="https://twitter.com"
+                href="https://x.com/A_d_itya"
                 target="_blank"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
@@ -179,16 +187,16 @@ const NavBar = () => {
                 <TwitterIcon />
               </motion.a>
               <motion.a
-                href="https://github.com"
+                href="https://github.com/AdityaPSingh-dev"
                 target="_blank"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-6 mx-3"
+                className="w-6 mx-3 "
               >
                 <GithubIcon />
               </motion.a>
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/aditya-pratap-singh-b6a8291ba/"
                 target="_blank"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
@@ -197,7 +205,7 @@ const NavBar = () => {
                 <LinkedInIcon />
               </motion.a>
               <motion.a
-                href="https://pinterest.com"
+                href="https://www.pinterest.com/AdiSingh1505/"
                 target="_blank"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
@@ -206,7 +214,7 @@ const NavBar = () => {
                 <PinterestIcon />
               </motion.a>
               <motion.a
-                href="https://dribbble.com"
+                href="https://dribbble.com/Aditya1505"
                 target="_blank"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
@@ -289,7 +297,7 @@ const NavBar = () => {
 
           <div className="flex items-center justify-center mt-8">
             <motion.a
-              href="https://twitter.com"
+              href="https://x.com/A_d_itya"
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -298,7 +306,7 @@ const NavBar = () => {
               <TwitterIcon />
             </motion.a>
             <motion.a
-              href="https://github.com"
+              href="https://github.com/AdityaPSingh-dev"
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -307,7 +315,7 @@ const NavBar = () => {
               <GithubIcon />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/aditya-pratap-singh-b6a8291ba/"
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -316,7 +324,7 @@ const NavBar = () => {
               <LinkedInIcon />
             </motion.a>
             <motion.a
-              href="https://pinterest.com"
+              href="https://www.pinterest.com/AdiSingh1505/"
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -325,7 +333,7 @@ const NavBar = () => {
               <PinterestIcon />
             </motion.a>
             <motion.a
-              href="https://dribbble.com"
+              href="https://dribbble.com/Aditya1505"
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}

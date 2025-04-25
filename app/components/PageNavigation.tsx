@@ -37,7 +37,7 @@ const PageNavigation = () => {
   return (
     <>
       {/* Progress Bar */}
-      <div className="fixed top-0 left-0 w-full h-2 bg-gray-300">
+      <div className="fixed top-0 left-0 w-full h-2 bg-gray-300 z-20">
         <div
           className="h-full bg-gradient-to-r from-green-400 to-green-600 transition-all duration-300"
           style={{ width: `${progress}%` }}
@@ -50,7 +50,7 @@ const PageNavigation = () => {
           onClick={() => navigateTo(currentIndex - 1)}
           className="fixed left-6 top-1/2 transform -translate-y-1/2 bg-white/30 backdrop-blur-md text-black
           border border-white/40 shadow-xl rounded-full w-16 h-16 flex items-center justify-center 
-          transition-all duration-300 hover:scale-125 hover:bg-white/80 hover:border-white/70 hover:shadow-2xl sm:hidden "
+          transition-all duration-300 hover:scale-125 hover:bg-white/80 hover:border-white/70 hover:shadow-2xl sm:hidden z-20 "
         >
           <span className="text-3xl font-bold">←</span>
         </button>
@@ -62,7 +62,7 @@ const PageNavigation = () => {
           onClick={() => navigateTo(currentIndex + 1)}
           className="fixed right-6 top-1/2 transform -translate-y-1/2 bg-white/30 backdrop-blur-md text-black
           border border-white/40 shadow-xl rounded-full w-16 h-16 flex items-center justify-center 
-          transition-all duration-300 hover:scale-125 hover:bg-white/80 hover:border-white/70 hover:shadow-2xl sm:hidden"
+          transition-all duration-300 hover:scale-125 hover:bg-white/80 hover:border-white/70 hover:shadow-2xl sm:hidden z-20"
         >
           <span className="text-3xl font-bold">→</span>
         </button>
