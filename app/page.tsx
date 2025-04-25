@@ -69,7 +69,7 @@ export default function Home() {
                     dark:active:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255)] md:text-base sm:text-sm md:p-2 md:px-4 sm:p-1 sm:px-2"
                 >
                   Resume
-                  <PiDownloadSimpleBold className="ml-2 w-6 h-6  " />
+                  <PiDownloadSimpleBold className="ml-2 w-6 h-6 sm:w-5 sm:h-4  " />
                 </Link>
 
                 <Link

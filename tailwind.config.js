@@ -13,6 +13,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      touchAction: {
+        "pan-y": "pan-y",
+      },
       fontFamily: {
         mont: ["var(--font-mont)", ...fontFamily.sans],
       },
