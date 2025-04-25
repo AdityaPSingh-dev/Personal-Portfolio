@@ -23,7 +23,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head></head>
       <body
         className={`${montserrat.className} font-mont bg-[#F2F3F2] w-full min-h-screen dark:bg-dark dark:text-light`}
       >
